@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Love Surprise</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #000000, #2b001f);
+      overflow: hidden;
+      font-family: Arial;
+    }
+
+    h1 {
+      color: #ff4d6d;
+      font-size: 70px;
+      text-shadow: 0 0 20px #ff4d6d;
+      text-align: center;
+      animation: fade 2s ease-in-out;
+    }
+
+    .heart {
+      position: absolute;
+      color: #ff4d6d;
+      animation: float 6s linear infinite;
+      font-size: 20px;
+    }
+
+    @keyframes float {
+      0% {transform: translateY(100vh);}
+      100% {transform: translateY(-10vh);}
+    }
+
+    @keyframes fade {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>❤️ I Love You ❤️</h1>
+
+<script>
+  function heart(){
+    const h = document.createElement("div");
+    h.className = "heart";
+    h.innerHTML = "❤️";
+    h.style.left = Math.random()*100 + "vw";
+    h.style.fontSize = Math.random()*20 + 10 + "px";
+    document.body.appendChild(h);
+
+    setTimeout(()=>h.remove(),6000);
+  }
+
+  setInterval(heart,300);
+</script>
+
+</body>
+</html>
