@@ -70,10 +70,10 @@
   <p>When did we start dating?</p>
   <input type="date" id="q1">
 
-  <p>What is my favorite color?</p>
-  <input type="text" id="q2">
+  <p>When is my birthday? </p>
+  <input type="date" id="q2">
 
-  <p>When am I the happiest?</p>
+  <p>What is my favorite color?</p>
   <input type="text" id="q3">
 
   <br><br>
@@ -86,10 +86,10 @@
 function checkAnswers(){
 
   let a1 = document.getElementById("q1").value;
-  let a2 = document.getElementById("q2").value.toLowerCase();
+  let a2 = document.getElementById("q2").value;
   let a3 = document.getElementById("q3").value.toLowerCase();
 
-  if(a1 === "2021-10-23" && a2 === "bleu" && a3 === "when I am with you"){
+  if(a1 === "2021-10-23" && a2 === "2004-28-08" && a3 === "bleu"){
 
     document.getElementById("formBox").innerHTML = `
       <h1>❤️ Hey Nabil ❤️</h1>
